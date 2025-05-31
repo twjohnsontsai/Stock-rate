@@ -1,0 +1,5 @@
+{
+  "stock_code": "2382",
+  "days": 60,
+  "url_template": "https://www.twse.com.tw/fund/BFI82U?response=csv&date={date}&stockNo={stock_code}"
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <title>千張大戶與法人分析</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label,
+        input,
+        button {
+            display: block;
+            margin-top: 10px;
+        }
+
+        img {
+            margin-top: 20px;
+            max-width: 90%;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>📊 千張大戶與法人持股分析系統</h1>
+    <form method="post">
+        股票代碼: <input type="text" name="stock_no" value="2382">
+        分析天數: <input type="text" name="days" value="60">
+        <button type="submit">生成圖表</button>
+    </form>
+    
+
+    {% if result_message %}
+    <p>{{ result_message }}</p>
+    {% endif %}
+
+    {% if output_image_path %}
+    <img src="{{ output_image_path }}" alt="分析圖表">
+    {% endif %}
+</body>
+
+</html>
